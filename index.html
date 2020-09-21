@@ -12,9 +12,9 @@
 
 <body>
 	<nav>
-		<a href="#1">Reflection</a>
-		<a href="#2">Coding</a>
-		<a href="#3">Planning</a>
+		<a href="#4">Reflection</a>
+		<a href="#3">Coding</a>
+		<a href="#2">Planning</a>
 		<a href="#1">Ideation</a>
 
 </nav>
@@ -54,7 +54,10 @@ This is the idea I am leaning towards most. <br>The only flaw I can think of is 
 However, users can have the QR code on their desktop and scan it on their phone if they want, so it is not too big of a flaw. Alternatively
 the QR code will be accompanied with a hyper linked URL on the website archive so they can just click that on their desktop device. <br><br>
 
-My second idea was a <b>physical printed out map,</b> say maybe a1 or a0 size and stuck on a wall in a public (but indoor) space. This would make it an interactive <b>exhibition</b>, therefore limiting its audience to curious people who go into exhibit spaces, or those who have heard of it. It would be on the wall, and people would be able to pick up physical location pins (individually numbered) then place them on the map where they saw a QR code. There will be an accompanying table with the pin numbers, and a space next to it for the person to write the url that the QR code led them to.<br> A flaw of this is that it would limit the number of entries, as there is a physical space limit on the physical map, and it would be less permanent than a digital archive.
+My second idea was a <b>physical printed out map,</b> say maybe a1 or a0 size and stuck on a wall in a public (but indoor) space. This would make it an interactive <b>exhibition</b>, therefore limiting its audience to curious people who go into exhibit spaces, or those who have heard of it. It would be on the wall, and people would be able to pick up physical location pins (individually numbered) then place them on the map where they saw a QR code. There will be an accompanying table with the pin numbers, and a space next to it for the person to write the url that the QR code led them to.<br> A flaw of this is that it would
+limit the number of entries, as there is a physical space limit on the physical map, and it would be less permanent than a digital archive.<br><br>
+Below is a very rough sketch of what some of the components of a physical exhibition of Q-ARCHIVE might look like.<br><br>
+<img src="img/wireframe.jpg">
 
 <br><br>
 My last idea for this project is a mobile <b>app</b> that has the map functionality. The only way this would really be different to the website is layout,
@@ -66,13 +69,34 @@ I think I will work on a website prototype, as it seems like the most effective 
 		<p>
 
 		<h2 id="2"> Planning </h2>
-		<p>
-		<img src="img/map_wireframe.png"></img>
-		<i>Wireframe I made at <a href="https://wireframe.cc/fzFUI1">https://wireframe.cc/fzFUI1</a></i>
+		<p>16/09/2020<br>
+			Wireframing<br><br>
+			I did some physical sketches of what I want my Q-ARCHIVE website to look like (aimed towards desktop users), iterating a few different ideas.
+			I thenused wireframe.cc to make a digital wireframe to follow.
+
+The main (map page) will hopefully look like this.<br><br>
+		<img src="img/map_wireframe.png"></img><br>
+		This wireframe can be found at at <i><a href="https://wireframe.cc/fzFUI1">https://wireframe.cc/fzFUI1</a></i><br><br>
+		The hard part I think will be getting the information to display separate from the map, but to respond to the map (when you click on the map
+		it brings up the information about that QR code in a separate section). If this does not work, the map page will simply be a map
+		(and the info pops up as you click on it, as supported by Google Maps).
+
 		</p>
 			<h2 id="3">Coding</h2>
-			<p> When walking around the city, I see many QR codes on posters and stickers that lead to a vast variety of web pages, but I know that none of these are permanent. <br><br>I began thinking of a way to preserve these codes in a
-				way that is still explorable and accessible by the public.<br><br>Here is a selection of the codes I encountered on my way to and from university.</p>
+			<p> 16/09/2020<br>
+				Getting base code working<br><br>I started to get the actual basic code of my website done, starting with HTML and CSS. <br><br>
+
+For the page with the map, I figured it would be too hard to have the separate section with information about
+each QR code, so I just worked on embedding my google map into a page, and getting a working hamburger menu. This is the very basic wireframe I was
+following (I made ANOTHER simpiler one with less small details to make it less confusing for myself).<br><br>
+<img src="img/badwireframe.jpg"><br><br>
+I managed to get all the content onto the page with no trouble. Next I need to work on styling the page to fit the aesthetic of my project,
+and laying it out like the wire frames in the previous post. <br><br>
+I also used a modified version of <a href="https://codepen.io/erikterwan/pen/EVzeRP">this hamburger menu</a> on my website.
+I made it fit the height of the page and contain the links that I need.<br><br>
+<img src="img/firstwebiteration.png">
+
+			</p>
 				<h2 id="4">Reflection</h2>
 
 
