@@ -104,12 +104,97 @@ and <a href="https://www.youtube.com/watch?v=1JNwpp5L4vM&ab_channel=WebbyFan.com
 <br><br>
 At this stage I can't figure out what is wrong, as I have followed the tutorials word for word and the map is still not appearing on my site
 even without the code for the styling styling. The styling is important as it will make the map match with my brands aesthetics.
-I may have to look into other methods of implementing a stylised map if I can't get this working soon.
+I may have to look into other methods of implementing a stylised map if I can't get this working soon. Below is the code I currently have written
+for the map.<br><br>
+<img src="img/apimapcode.png"> <br><br>
+
+17/09/2020<br>
+The map is working!<br><br>
+Turns out all that I needed to do was put a billing account on my API thing to get it to work, a
+nd give the container it was in a height (as it was 0 so the map wasn't showing up). The styled map looks really good with my brand
+logo. I think to make the design as cohesive as possible I want to try and put a gradient in the background rather than a flat grey.
+The map style is one I created in Snazzy Maps (<a href="https://snazzymaps.com/style/330974/q-archive">https://snazzymaps.com/style/330974/q-archive</a>) and looks like this: <br><br>
+<img src="img/snazzy-image.png">
+<br><br>and looks like this on my site:<br><br>
+<img src="img/stylemap.png">
+<br><br>
+I might play around with the sizing but I currently like the long and narrow look it has going at the moment,
+it sort of reminds me of a wide screen movie like you see in the cinema. <br><br>
+
+My next step is to add markers and info boxes when the markers are clicked on. I fear this may be harder than I anticipated,
+as I can't simply use My Maps, I have to code all of this myself. But it will be good for me to learn these skills.
+<br><br>
+17/09/2020<br>
+Custom markers<br><br>
+Putting in custom markers this way requires me to manually put the coordinates for each location into an array.<br><br>
+
+<a href="https://developers.google.com/maps/documentation/javascript/custom-markers">https://developers.google.com/maps/documentation/javascript/custom-markers</a>
+This is the tutorial I followed to get it to work.
+I also designed a custom pin marker with a QR code on it to help with my branding.<br><br>
+<img src="img/mapmarkers.png"><br><br>
+<img src="img/icon.png"><br><br>
+18/09/2020<br>
+Info windows<br><br>
+To make the map effective, I needed to make the markers display information about what QR code was sighted there when clicked on.
+This is known as an info window. It took me awhile to figure out how to get this working, as initially it was only working on the
+last location in my array of co-ordinates, and would only display one piece of information for all of the different markers.
+Eventually I ended up combining this code here
+<a href="https://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example">https://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example</a> with my own to achieve what I wanted.
+<br><br>
+The next step is to format it so that it matches the rest of my page and include an image. This is currently what it looks like (wrong info!)
+<br><br>
+<img src="img/infowindow.png"><br><br>
+19/09/2020<br>
+Customising the info windows<br><br>
+
+Google said themselves that these windows have limited customisation, but I couldn't find any alternative way to do this within my skill level.
+My main problem was the background, as I couldn't get it to change colours the way I wanted it to. It ended up looking like this:<br><br>
+<img src="img/background.PNG"><br><br>
+So I decided to just roll with the white background, as it sort of nicely contrasted with the black map anyway.
+The main things I had to do to the info window were add the image, and change the content. Some of the things I did to improve it were:<br><br>
+<ul>
+<li>Stop the scrolling in the window, as this was annoying and quite frankly a bit ugly
+<li>Change the colours
+<li>Link fades to a different colour when you are hovering over it, providing feedback to the user that this is a hyperlink that you can interact with!</li>
+<li>Only one info window opens at a time. Originally it would open a new one for every marker you clicked on, which was too cluttered and annoying to close.</li>
+<li>I also removed the may type options in the top left (satellite/map option) as changing the map to satellite view ruined the aesthetic of the page,
+	and I also got rid of the street view option for the same reason. This was a very simple bit of code to implement :)</li>
+<li>Put the 'date archived' section at the bottom. To do this I turned all of my info into a table, but it worked well so I'll keep it that way.</li>
+</ul>
+<p>Below is the code for the marker and the infobox css, as well as the final look on my website.<br><br>
+	<img src="img/css.png"><br><br>
+	<img src="img/finalmaybe.png">
 
 			</p>
 				<h2 id="4">Reflection</h2>
+<p>
+	22/09/2020<br><br>
+	When starting out with this project, I thought it would be as simple as embedding a map that I had customised online on Google Maps.<br><br>
+
+It ended up being so much more complicated than that and I had to learn and understand a lot of JavaScript that I wasn't expecting.
+Luckily I have been teaching myself a bit of code for this class, and I learnt a bit of java beforehand in creative coding 1 and 2,
+so with that knowledge and a lot of help from Google I was able to get the map working. Without this proir knowledge I don't think I
+would have been able to achieve as much as I did.
+<br><br>
+The most difficult bit of coding the map was the info windows. I had a lot of trouble understand how the code for them was working in the
+ official google documentation, and ended up having to use a different way that I found on a help forum online. I also think that they
+ could be styled to suit my projects aesthetics better, but working with what I had I think that I did a pretty good job. <br><br>
+
+I think the part that worked the best of the map is the styling. The custom colours on the map really helps match the map to my
+brand. The default google map styles are quite frankly a bit ugly and there were none remotely close to what I wanted. Also being
+able to turn off street and satellite view through the code was good, as now users have to view the map the way I intend it to be seen. <br><br>
+
+The submission form was simple html and css, which was a lot easier than I was expecting. If I was making it fully functional (i.e.
+making it send the submitted data somewhere) it would probably end up being a lot more difficult, but for this prototype it works
+as much as it need it too. The hardest part was probably as simple as getting it all aligned properly. <br><br>
 
 
+Overall, the page has the right digital, modern look I was hoping to achieve. I'm really proud of all of the coding that I did
+to make this work so seamlessly, and I believe that this could work as an actual full scale project that real people could interact
+with and contribute too with a little more tweaking.<br><br>
+
+The final prototype can be found at <a href="https://straycatss.github.io/Project2prototype/">https://straycatss.github.io/Project2prototype/</a>
+</p>
 	</section>
 
 </body>
